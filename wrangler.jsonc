@@ -1,0 +1,66 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "image-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-04-06",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "routes": [
+    {
+      "pattern": "image.app.juli.sh",
+      "custom_domain": true
+    }
+  ],
+  "queues": {
+    "producers": [
+      {
+        "queue": "image-queue",
+        "binding": "IMAGE_QUEUE"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "image-queue",
+        "max_batch_size": 1,
+        "max_retries": 3,
+        "max_batch_timeout": 1
+      }
+    ]
+  },
+  "r2_buckets": [
+    {
+      "bucket_name": "gemini",
+      "binding": "IMAGES"
+    }
+  ],
+  // "vars": {
+  //   "MY_VAR": "my-variable"
+  // },
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "b064a87b265142cebe399429e385aa93"
+    }
+  ],
+  // "r2_buckets": [
+  //   {
+  //     "binding": "MY_BUCKET",
+  //     "bucket_name": "my-bucket"
+  //   }
+  // ],
+  // "d1_databases": [
+  //   {
+  //     "binding": "MY_DB",
+  //     "database_name": "my-database",
+  //     "database_id": ""
+  //   }
+  // ],
+  // "ai": {
+  //   "binding": "AI"
+  // },
+  // "observability": {
+  //   "enabled": true,
+  //   "head_sampling_rate": 1
+  // }
+}
