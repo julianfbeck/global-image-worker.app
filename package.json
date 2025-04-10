@@ -5,6 +5,7 @@
     "deploy": "wrangler deploy --minify"
   },
   "dependencies": {
+    "@hono/sentry": "^1.2.1",
     "@sentry/cloudflare": "^9.11.0",
     "hono": "^4.7.5"
   },
