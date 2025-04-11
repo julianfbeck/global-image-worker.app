@@ -10,5 +10,22 @@ export interface Env {
 		incr(key: string): Promise<number>;
 		expire(key: string, seconds: number): Promise<0 | 1>;
 		ttl(key: string): Promise<number>;
+		get(key: string): Promise<string | null>;
+		set(key: string, value: string, options?: any): Promise<string | null>;
+		del(key: string): Promise<number>;
 	}
+}
+
+/**
+ * Message structure for the image processing queue
+ */
+export interface QueueMessage {
+	image: {
+		key: string;  // R2 object key
+		mime_type: string;
+	};
+	styleID: string;
+	userID: string;
+	timestamp: number;
+	requestId: string;
 } 

@@ -2,18 +2,7 @@ import { Redis } from '@upstash/redis';
 import { Queue, MessageBatch } from '@cloudflare/workers-types';
 import { generatePrompt } from '../services/promptGenerator';
 import { createGeminiService } from '../services/geminiService';
-import type { Env } from '../types';
-
-interface QueueMessage {
-	image: {
-		key: string;  // R2 object key
-		mime_type: string;
-	};
-	styleID: string;
-	userID: string;
-	timestamp: number;
-	requestId: string;
-}
+import type { Env, QueueMessage } from '../types';
 
 export class ImageQueueConsumer {
 	constructor(private readonly queue: Queue) { }
