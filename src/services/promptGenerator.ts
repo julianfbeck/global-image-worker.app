@@ -367,10 +367,248 @@ const STYLES: Record<string, StyleConfig> = {
 `
   },
   // Additional styles to be added later:
-  // "cyberpunk-anime-003"
-  // "chibi-kawaii-004"
-  // "shoujo-soft-006"
-  // "titan-dark-010"
+  //new styles 
+  // New styles
+  "anime-default-001": {
+    styleID: "anime-default-001",
+    name: "Anime Default",
+    prompt: "transform this into a contemporary high-quality anime style with detailed characters and dynamic composition. ITS IMPORTANT TO ONLY ADD CHARACTERS THAT ARE IN THE ORIGINAL IMAGE. NO COPYRIGHTED CHARACTERS!",
+    styleJson: `<prompt>
+    <style>Modern Anime</style>
+    <characters>
+      <description>Original characters with contemporary anime aesthetic</description>
+      <features>
+        <face>Angular jawlines with defined features, balance of realism and stylization</face>
+        <eyes>Large, highly detailed with multiple highlights, reflections, and color gradients</eyes>
+        <hair>Voluminous with complex coloring, shading, and individual strand detail</hair>
+        <body>Realistic proportions with slight stylization, detailed anatomy</body>
+        <skin>Smooth with subtle shading and occasional blush effects</skin>
+      </features>
+      <expressions>Dynamic and emotionally intense with exaggerated reaction potential</expressions>
+      <clothing>
+        <detail>High detail with realistic folds, textures, and material properties</detail>
+        <style>Contemporary fashion with intricate accessories and layering</style>
+        <shading>Multiple light sources with proper shadowing and material reflection</shading>
+      </clothing>
+    </characters>
+    <artStyle>
+      <technique>Digital painting with crisp linework and detailed coloring</technique>
+      <colors>Vibrant palette with high contrast and color theory application</colors>
+      <linework>Clean, varied weight lines with selective emphasis</linework>
+      <shading>Cel-shading with additional gradient work for depth</shading>
+      <effects>Selective bloom, lens flares, and particle effects</effects>
+      <composition>Dynamic camera angles and perspective</composition>
+    </artStyle>
+    <background>
+      <style>Blurred or simplified detail to focus on characters</style>
+      <lighting>Dramatic lighting with emphasis on character illumination</lighting>
+    </background>
+    <postProcessing>
+      <effects>Subtle color grading, vignetting, and atmospheric effects</effects>
+      <quality>High resolution with clean anti-aliasing</quality>
+    </postProcessing>
+    <restrictions>
+      <avoid>Adding additional Characters that are not in the original image</avoid>
+    </restrictions>
+  </prompt>`
+  },
+  "ghibli-inspired-002": {
+    styleID: "ghibli-inspired-002",
+    name: "Studio Ghibli",
+    prompt: "transform this into a hand-painted animation style similar to Studio Ghibli films with soft colors and painterly textures. ITS IMPORTANT TO ONLY ADD CHARACTERS THAT ARE IN THE ORIGINAL IMAGE. NO COPYRIGHTED CHARACTERS!",
+    styleJson: `<prompt>
+    <style>Studio Ghibli animation</style>
+    <characters>
+      <description>Original characters with the distinctive Ghibli aesthetic</description>
+      <features>
+        <face>Rounded with simple but expressive features, soft lines</face>
+        <eyes>Large, detailed eyes with defined highlights and reflections</eyes>
+        <hair>Flowing, detailed with individual strands but not over-rendered</hair>
+        <body>Naturalistic proportions with slight stylization</body>
+        <movement>Fluid, graceful with attention to weight and physics</movement>
+      </features>
+      <expressions>Subtle, nuanced emotional range with attention to micro-expressions</expressions>
+      <clothing>Detailed fabrics with natural draping, often flowing in the wind</clothing>
+    </characters>
+    <artStyle>
+      <technique>Hand-drawn appearance with watercolor-like textures</technique>
+      <colors>Soft, natural palette with emphasis on greens, blues and earth tones</colors>
+      <linework>Delicate, varied line weight with hand-painted appearance</linework>
+      <lighting>Soft, diffused with attention to atmospheric perspective</lighting>
+      <textures>Subtle watercolor washes and painterly details</textures>
+    </artStyle>
+    <background>
+      <style>Impressionistic, painterly with attention to natural beauty</style>
+    </background>
+    <mood>
+      <feeling>Peaceful, contemplative, nostalgic</feeling>
+      <atmosphere>Sense of wonder and connection to nature</atmosphere>
+    </mood>
+    <restrictions>
+      <avoid>Adding additional Characters that are not in the original image</avoid>
+    </restrictions>
+  </prompt>`
+  },
+  "onepiece-007": {
+    styleID: "onepiece-007",
+    name: "One Piece Style",
+    prompt: "transform this into a One Piece style anime with exaggerated proportions and dynamic expressions. ITS IMPORTANT TO ONLY ADD CHARACTERS THAT ARE IN THE ORIGINAL IMAGE. NO COPYRIGHTED CHARACTERS!",
+    styleJson: `<prompt>
+    <style>One Piece animation</style>
+    <characters>
+      <description>Original characters with One Piece aesthetic</description>
+      <features>
+        <eyes>Small to medium, often with distinctive shapes for important characters</eyes>
+        <eyebrows>Highly expressive, often exaggerated during emotional moments</eyebrows>
+        <mouths>Wide range from tiny to extremely large during emotional scenes</mouths>
+        <noses>Distinctive and varied (from button noses to long, angular shapes)</noses>
+        <hair>Wildly varied styles with impossible gravity-defying shapes and colors</hair>
+        <proportions>Extremely exaggerated - tiny waists, broad shoulders, large hands</proportions>
+      </features>
+      <expressions>Over-the-top emotional reactions, comical tears, bulging veins</expressions>
+      <clothing>
+        <folds>Simple but dynamic, emphasizing movement</folds>
+        <materials>Flat colors with minimal texture detail</materials>
+        <accessories>Distinctive, character-defining items with bold shapes</accessories>
+      </clothing>
+    </characters>
+    <artStyle>
+      <technique>Bold, varied thickness with emphasis on character silhouettes</technique>
+      <colors>Bold, vibrant colors with high saturation (blues, reds, yellows, greens)</colors>
+      <linework>Dynamic lines with exaggerated curves and angles</linework>
+      <shading>Simplified, dramatic shadows with minimal gradients</shading>
+      <effects>Freeze frames for impact, speed lines, dramatic poses</effects>
+    </artStyle>
+    <background>
+      <style>Exaggerated landscapes, tropical settings, dramatic skies</style>
+      <lighting>High contrast with dramatic shadows and highlights</lighting>
+      <colorGrading>Bright and punchy with strong color differentiation</colorGrading>
+    </background>
+    <restrictions>
+      <avoid>Adding additional Characters that are not in the original image</avoid>
+    </restrictions>
+  </prompt>`
+  },
+  "naruto-009": {
+    styleID: "naruto-009",
+    name: "Naruto Style",
+    prompt: "transform this into a Naruto style anime with distinctive character designs and dynamic action poses. ITS IMPORTANT TO ONLY ADD CHARACTERS THAT ARE IN THE ORIGINAL IMAGE. NO COPYRIGHTED CHARACTERS!",
+    styleJson: `<prompt>
+    <style>Naruto animation</style>
+    <characters>
+      <description>Original characters with Naruto aesthetic</description>
+      <features>
+        <eyes>Large, expressive with distinct pupil shapes (especially for doujutsu)</eyes>
+        <eyebrows>Thin but expressive, often furrowed during conflict</eyebrows>
+        <mouths>Simple lines that expand dramatically during emotional outbursts</mouths>
+        <noses>Minimal, often just a short line or small triangle</noses>
+        <hair>Spiky, gravity-defying styles with distinctive silhouettes</hair>
+        <proportions>Athletic builds with exaggerated poses during action</proportions>
+      </features>
+      <expressions>Intense close-ups on eyes, dramatic pose freezes</expressions>
+      <clothing>
+        <folds>Dynamic with flowing movement during action sequences</folds>
+        <materials>Simplified ninja gear, headbands, mesh undershirts</materials>
+        <accessories>Distinctive clan symbols, weapon pouches, scrolls, ninja tools</accessories>
+      </clothing>
+    </characters>
+    <artStyle>
+      <technique>Sharp, clean lines with thickness variation for impact</technique>
+      <colors>Earth tones with vibrant accents (oranges, blues, greens, reds)</colors>
+      <linework>Angular with speed lines during action sequences</linework>
+      <shading>Flat cell shading with occasional gradient for special effects</shading>
+      <effects>Flashbacks with monochrome or sepia effects, hand signs in sequence</effects>
+    </artStyle>
+    <background>
+      <style>Blend of traditional Japanese scenery and fantasy elements</style>
+      <lighting>Dynamic with chakra-based glows and dramatic shadows during battles</lighting>
+      <colorGrading>Semi-muted with sharp contrasts during emotional or action moments</colorGrading>
+    </background>
+    <restrictions>
+      <avoid>Adding additional Characters that are not in the original image</avoid>
+    </restrictions>
+  </prompt>`
+  },
+  "shonen-dynamic-005": {
+    styleID: "shonen-dynamic-005",
+    name: "Shonen Action",
+    prompt: "transform this into a dynamic shonen action style anime with intense expressions and energetic composition. ITS IMPORTANT TO ONLY ADD CHARACTERS THAT ARE IN THE ORIGINAL IMAGE. NO COPYRIGHTED CHARACTERS!",
+    styleJson: `<prompt>
+    <style>Shonen Action Animation</style>
+    <characters>
+      <description>Original characters with shonen action aesthetic</description>
+      <features>
+        <eyes>Determined, intense with dramatic highlights during emotional moments</eyes>
+        <eyebrows>Thick, expressive, often furrowed in concentration or anger</eyebrows>
+        <mouths>Range from gritted teeth to wide battle cries</mouths>
+        <noses>Simple but defined, especially in profile shots</noses>
+        <hair>Distinctive, gravity-defying styles that may change color during power-ups</hair>
+        <proportions>Athletic to muscular builds with heroic stances</proportions>
+      </features>
+      <expressions>Power-up sequences, training montages, rival staredowns</expressions>
+      <clothing>
+        <folds>Dynamic with dramatic billowing during power-ups or movement</folds>
+        <materials>Durable battle gear, training uniforms, or school clothes with personal flair</materials>
+        <accessories>Power-indicating items, weapons, or symbolic accessories that represent character growth</accessories>
+      </clothing>
+    </characters>
+    <artStyle>
+      <technique>Strong, confident lines with variable thickness for emphasis</technique>
+      <colors>Bold primary colors with high contrast (reds, blues, yellows)</colors>
+      <linework>Dynamic with motion lines and impact frames</linework>
+      <shading>Bold shadows that emphasize musculature and power poses</shading>
+      <effects>Visible battle auras, dramatic tears of determination, gritted teeth</effects>
+    </artStyle>
+    <background>
+      <style>Dynamic environments that emphasize action and scale</style>
+      <lighting>Dramatic with energy auras, power effects, and impact flashes</lighting>
+      <colorGrading>Vibrant with heightened saturation during key battle moments</colorGrading>
+    </background>
+    <restrictions>
+      <avoid>Adding additional Characters that are not in the original image</avoid>
+    </restrictions>
+  </prompt>`
+  },
+  "dragonball-008": {
+    styleID: "dragonball-008",
+    name: "Dragon Ball Z",
+    prompt: "transform this into a Dragon Ball Z style anime with bold outlines, dramatic power-ups, and exaggerated musculature. ITS IMPORTANT TO ONLY ADD CHARACTERS THAT ARE IN THE ORIGINAL IMAGE. NO COPYRIGHTED CHARACTERS!",
+    styleJson: `<prompt>
+    <style>Dragon Ball Z animation</style>
+    <characters>
+      <description>Original characters with Dragon Ball Z aesthetic</description>
+      <features>
+        <eyes>Small, determined with white highlights during intense moments</eyes>
+        <eyebrows>Expressive, often absent during major transformations</eyebrows>
+        <mouths>Simple but highly expressive during screaming power-ups</mouths>
+        <noses>Minimal, often just a simple line or dot</noses>
+        <hair>Distinctive spiky styles that change color and grow during transformations</hair>
+        <proportions>Exaggerated musculature with impossible physiques during power-ups</proportions>
+      </features>
+      <expressions>Long power-up sequences, charging attacks, muscle flexing</expressions>
+      <clothing>
+        <folds>Dramatic with billowing martial arts clothing during power-ups and movement</folds>
+        <materials>Training uniforms, battle armor with distinct color blocking</materials>
+        <accessories>Weighted training gear, scanning devices, powerful accessories, power limiters</accessories>
+      </clothing>
+    </characters>
+    <artStyle>
+      <technique>Bold, confident lines with emphasis on muscular definition</technique>
+      <colors>Vibrant, high-contrast colors (orange-blue for protagonists, purple-pink for antagonists)</colors>
+      <linework>Dynamic with distinctive roundness to forms typical of 80s-90s manga style</linework>
+      <shading>Strong muscle definition with dramatic shadows during power-ups</shading>
+      <effects>Extended battle cries, world-shaking power demonstrations</effects>
+    </artStyle>
+    <background>
+      <style>Dramatic landscapes with crater impacts and energy disruptions</style>
+      <lighting>Intense auras, energy effects, and power-up luminescence</lighting>
+      <colorGrading>Bold with dramatic shifts during transformations</colorGrading>
+    </background>
+    <restrictions>
+      <avoid>Adding additional Characters that are not in the original image</avoid>
+    </restrictions>
+  </prompt>`
+  }
 };
 
 /**
