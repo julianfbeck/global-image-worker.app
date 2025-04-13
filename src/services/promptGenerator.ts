@@ -888,6 +888,425 @@ const STYLES: Record<string, StyleConfig> = {
       <maintain>Essential elements while applying ukiyo-e woodblock aesthetic</maintain>
     </restrictions>
   </prompt>`
+  },
+  "colorbook-111": {
+    styleID: "colorbook-111",
+    name: "Coloring Book",
+    prompt: "Transform this into a coloring book page with clean, bold outlines and empty spaces ready to be filled with color. Create distinct areas with clear boundaries while maintaining the essential elements of the original image.",
+    styleJson: `<prompt>
+    <style>Coloring Book</style>
+    <artStyle>
+      <technique>Bold black outlines with completely white fill areas</technique>
+      <linework>Clean, continuous black lines of consistent weight defining all shapes</linework>
+      <details>Simplified interior details with patterns and texture indicators</details>
+      <spaces>Well-defined empty areas of appropriate size for coloring</spaces>
+      <complexity>Balance between detail and simplicity for an engaging coloring experience</complexity>
+    </artStyle>
+    <composition>
+      <elements>Clear separation between distinct elements with defined boundaries</elements>
+      <balance>Mixture of larger areas and smaller details for varied coloring experience</balance>
+      <patterns>Optional interior patterns like dots, stripes, or simple textures</patterns>
+    </composition>
+    <technical>
+      <contrast>High contrast black and white with no grayscale</contrast>
+      <clarity>No ambiguous areas or bleeding between sections</clarity>
+      <printability>Design optimized for clear printing with sufficient line weight</printability>
+    </technical>
+    <restrictions>
+      <maintain>Essential elements and character of the original image</maintain>
+      <avoid>Shading, gradients, or filled areas that aren't pure white</avoid>
+    </restrictions>
+  </prompt>`
+  },
+  "colorbook-112": {
+    styleID: "colorbook-112",
+    name: "Detailed Adult Coloring",
+    prompt: "Transform this into a detailed adult coloring page with intricate patterns, fine lines, and complex details suitable for stress relief and mindfulness coloring.",
+    styleJson: `<prompt>
+  <style>Detailed Adult Coloring</style>
+  <artStyle>
+    <technique>Fine black outlines with intricate interior detailing</technique>
+    <linework>Varied weight lines creating detailed patterns and textures</linework>
+    <details>Highly intricate interior patterns including mandalas, zentangles, and natural motifs</details>
+    <spaces>Complex maze-like areas requiring focused attention and precision</spaces>
+    <complexity>High level of detail with repetitive pattern work throughout</complexity>
+  </artStyle>
+  <composition>
+    <elements>Transformed subjects interwoven with decorative patterns</elements>
+    <patterns>Elaborate repeating motifs like florals, geometric designs, and tessellations</patterns>
+    <density>Rich, detailed areas balanced with occasional breathing space</density>
+  </composition>
+  <technical>
+    <precision>Fine, delicate lines requiring steady hand and attention to detail</precision>
+    <diversity>Variety of pattern types and scales throughout the composition</diversity>
+    <intricacy>Layers of overlapping patterns creating visual depth</intricacy>
+  </technical>
+  <restrictions>
+    <maintain>Basic recognizable elements while embedding them in decorative patterns</maintain>
+    <avoid>Extremely tiny details that would be difficult to color or print</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-113": {
+    styleID: "colorbook-113",
+    name: "Children's Coloring Book",
+    prompt: "Transform this into a simple children's coloring book page with large, bold outlines, simplified forms, and ample coloring spaces perfect for young children.",
+    styleJson: `<prompt>
+  <style>Children's Coloring Book</style>
+  <artStyle>
+    <technique>Extra bold black outlines with very simplified forms</technique>
+    <linework>Thick, consistent lines that are easy for children to follow</linework>
+    <details>Minimal interior details with large, uncomplicated spaces</details>
+    <spaces>Generous coloring areas without tiny, fiddly sections</spaces>
+    <complexity>Low complexity suitable for developing motor skills</complexity>
+  </artStyle>
+  <composition>
+    <elements>Simplified, friendly versions of original elements</elements>
+    <balance>Large, open areas perfect for broad crayon strokes</balance>
+    <appeal>Cute, appealing forms with friendly expressions if faces are present</appeal>
+  </composition>
+  <technical>
+    <accessibility>Design suitable for children's coloring abilities</accessibility>
+    <clarity>Unmistakable forms with very clear boundaries</clarity>
+    <robustness>Lines strong enough to remain visible even with heavy crayon application</robustness>
+  </technical>
+  <restrictions>
+    <maintain>Core recognizable elements in simplified, child-friendly form</maintain>
+    <avoid>Small details, complex patterns, or scary elements</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-114": {
+    styleID: "colorbook-114",
+    name: "Manga Coloring Style",
+    prompt: "Transform this into a manga-style coloring page with distinctive anime aesthetics, dynamic lines, and characteristic facial features ready for coloring.",
+    styleJson: `<prompt>
+  <style>Manga Coloring Style</style>
+  <artStyle>
+    <technique>Sharp black outlines with manga-style detailing and screen tone patterns</technique>
+    <linework>Dynamic, varied-weight lines with emphasis on expressive contours</linework>
+    <details>Characteristic manga facial features and expression lines</details>
+    <textures>Screen tone-inspired pattern areas suggesting shadows and textures</textures>
+    <stylization>Distinctly Japanese comic style visual language</stylization>
+  </artStyle>
+  <composition>
+    <elements>Dynamic poses with characteristic manga proportions</elements>
+    <expression>Emphasis on emotional expressions and action lines</expression>
+    <patterns>Speed lines, impact stars, and emotion symbols as appropriate</patterns>
+  </composition>
+  <technical>
+    <contrast>Clear distinction between outline areas and pattern fill sections</contrast>
+    <screentones>Areas with dotted or lined patterns suggesting values when colored</screentones>
+    <dynamism>Sense of movement and energy through line quality</dynamism>
+  </technical>
+  <restrictions>
+    <maintain>Dynamic character of original while applying manga aesthetic</maintain>
+    <avoid>Western comic book styling or overly photorealistic details</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-115": {
+    styleID: "colorbook-115",
+    name: "Stained Glass Coloring",
+    prompt: "Transform this into a stained glass-style coloring page with thick black borders separating distinct color sections, creating a beautiful leaded glass effect when colored.",
+    styleJson: `<prompt>
+  <style>Stained Glass Coloring</style>
+  <artStyle>
+    <technique>Very thick black outlines resembling lead came in stained glass</technique>
+    <linework>Bold, flowing lines creating enclosed segments for each color area</linework>
+    <details>Simplified interior details with each element divided into color sections</details>
+    <spaces>Medium-sized enclosed areas that mimic glass pieces</spaces>
+    <design>Decorative, ornamental approach to form</design>
+  </artStyle>
+  <composition>
+    <elements>Subject transformed into interconnected colored segments</elements>
+    <borders>Extra thick boundary lines resembling lead channels</borders>
+    <structure>All areas completely enclosed with no open-ended lines</structure>
+  </composition>
+  <technical>
+    <sections>Complete color separation with no ambiguous boundaries</sections>
+    <thickness>Emphasis on varied border thickness for visual interest</thickness>
+    <completion>All areas fully enclosed to create true stained glass effect</completion>
+  </technical>
+  <restrictions>
+    <maintain>Overall recognizable form while dividing into glass-like segments</maintain>
+    <avoid>Tiny details that wouldn't work in actual stained glass</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-116": {
+    styleID: "colorbook-116",
+    name: "Geometric Coloring Pattern",
+    prompt: "Transform this into a geometric coloring pattern with angular forms, abstract shapes, and symmetric designs creating a modern, geometric art style.",
+    styleJson: `<prompt>
+  <style>Geometric Coloring Pattern</style>
+  <artStyle>
+    <technique>Clean black outlines forming geometric patterns and shapes</technique>
+    <linework>Precise, straight lines and perfect curves creating geometric forms</linework>
+    <details>Abstract interior patterns using triangles, circles, squares and polygons</details>
+    <spaces>Interconnected geometric shapes of various sizes</spaces>
+    <abstraction>Subject matter transformed into abstract geometric patterns</abstraction>
+  </artStyle>
+  <composition>
+    <elements>Original subjects suggested through geometric abstraction</elements>
+    <patterns>Repeating geometric motifs and tessellating shapes</patterns>
+    <symmetry>Balanced, often symmetrical or repeating structures</symmetry>
+  </composition>
+  <technical>
+    <precision>Sharp, clean edges with perfect geometric forms</precision>
+    <variation>Mix of shape sizes from large to small for visual interest</variation>
+    <coherence>Unified geometric style throughout the composition</coherence>
+  </technical>
+  <restrictions>
+    <maintain>Suggestion of original elements through geometric abstraction</maintain>
+    <avoid>Organic, flowing lines or realistic representations</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-117": {
+    styleID: "colorbook-117",
+    name: "Floral Pattern Coloring",
+    prompt: "Transform this into a floral pattern coloring page with decorative botanical elements, flowing organic lines, and natural motifs throughout.",
+    styleJson: `<prompt>
+  <style>Floral Pattern Coloring</style>
+  <artStyle>
+    <technique>Flowing black outlines creating botanical patterns and motifs</technique>
+    <linework>Organic, curved lines suggesting plant forms and growth</linework>
+    <details>Elaborate floral and leaf patterns with natural textures</details>
+    <spaces>Intertwining vines, flowers, and leaves creating a living tapestry</spaces>
+    <naturalism>Stylized but recognizable botanical forms</naturalism>
+  </artStyle>
+  <composition>
+    <elements>Original subjects embedded within or composed of floral elements</elements>
+    <patterns>Repeating botanical motifs like flowers, leaves, vines, and branches</patterns>
+    <growth>Sense of natural organic flow and plant-like development</growth>
+  </composition>
+  <technical>
+    <variety>Diverse plant forms from tiny buds to full blooms</variety>
+    <texture>Natural patterns like leaf veins, petal arrangements, and bark textures</texture>
+    <integration>Harmonious blending of subject with botanical elements</integration>
+  </technical>
+  <restrictions>
+    <maintain>Essence of original while transforming with botanical elements</maintain>
+    <avoid>Geometric, mechanical, or non-organic patterns</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-118": {
+    styleID: "colorbook-118",
+    name: "Fantasy World Coloring",
+    prompt: "Transform this into a fantasy world coloring page with magical elements, enchanted creatures, and whimsical details creating an imaginative scene.",
+    styleJson: `<prompt>
+  <style>Fantasy World Coloring</style>
+  <artStyle>
+    <technique>Distinctive black outlines creating a magical, fantastical version of the subject</technique>
+    <linework>Flowing, decorative lines with whimsical flourishes</linework>
+    <details>Enchanted embellishments like stars, sparkles, and magical symbols</details>
+    <spaces>Varied coloring areas with fantasy-themed textures and patterns</spaces>
+    <imagination>Transformation of ordinary elements into magical counterparts</imagination>
+  </artStyle>
+  <composition>
+    <elements>Original subjects enhanced with fantasy motifs and magical elements</elements>
+    <environment>Addition of fantasy world context like floating islands, castles, or magical forests</elements>
+    <creatures>Optional fantasy beings like fairies, dragons, or magical animals</creatures>
+  </composition>
+  <technical>
+    <worldbuilding>Cohesive fantasy aesthetic throughout the composition</worldbuilding>
+    <wonder>Elements that inspire imagination and wonder</wonder>
+    <storytelling>Implicit narrative elements suggested through imagery</storytelling>
+  </technical>
+  <restrictions>
+    <maintain>Recognizable core elements while enhancing with fantasy elements</maintain>
+    <avoid>Frightening or excessively dark fantasy elements</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-119": {
+    styleID: "colorbook-119",
+    name: "Animal Pattern Coloring",
+    prompt: "Transform this into an animal pattern coloring page with distinctive wild animal prints, textures, and features throughout the design.",
+    styleJson: `<prompt>
+  <style>Animal Pattern Coloring</style>
+  <artStyle>
+    <technique>Bold black outlines incorporating animal print patterns and textures</technique>
+    <linework>Strong lines depicting animal skin patterns and fur textures</linework>
+    <details>Distinctive animal prints like leopard spots, zebra stripes, scale patterns</details>
+    <spaces>Texture-filled areas suggesting animal surfaces</spaces>
+    <naturalism>Recognizable animal pattern elements throughout</naturalism>
+  </artStyle>
+  <composition>
+    <elements>Original subjects reimagined with animal pattern components</elements>
+    <patterns>Integration of multiple animal textures like scales, spots, stripes and feathers</patterns>
+    <diversity>Variety of wild animal pattern references throughout the design</diversity>
+  </composition>
+  <technical>
+    <authenticity>Accurate representation of natural animal patterns</authenticity>
+    <integration>Seamless incorporation of patterns into the overall design</integration>
+    <variability>Range of pattern scales from fine details to bold statements</variability>
+  </technical>
+  <restrictions>
+    <maintain>Essential form while transforming surfaces with animal patterns</maintain>
+    <avoid>Cartoonish or unrealistic animal pattern representations</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "colorbook-120": {
+    styleID: "colorbook-120",
+    name: "Mandala Coloring Design",
+    prompt: "Transform this into a mandala-style coloring design with radial symmetry, concentric circles, and meditative patterns arranged in a circular format.",
+    styleJson: `<prompt>
+  <style>Mandala Coloring Design</style>
+  <artStyle>
+    <technique>Precise black outlines creating a circular, symmetrical mandala pattern</technique>
+    <linework>Delicate, consistent lines forming intricate radial patterns</linework>
+    <details>Repeating symmetrical elements radiating from center point</details>
+    <spaces>Balanced coloring areas from tiny central details to larger outer segments</spaces>
+    <geometry>Perfect circular structure with radial and rotational symmetry</geometry>
+  </artStyle>
+  <composition>
+    <elements>Original subject transformed and incorporated into mandala framework</elements>
+    <symmetry>Perfect radial balance with repeating elements around central point</symmetry>
+    <layers>Concentric rings of patterns moving outward from center</layers>
+  </composition>
+  <technical>
+    <precision>Mathematical accuracy in symmetrical elements</precision>
+    <repetition>Consistent repetition of motifs around central axis</repetition>
+    <meditation>Patterns conducive to mindful, focused coloring experience</meditation>
+  </technical>
+  <restrictions>
+    <maintain>Essence of original subject while applying mandala transformation</maintain>
+    <avoid>Asymmetrical elements that disrupt the mandala harmony</avoid>
+  </restrictions>
+</prompt>`
+  },
+
+  "disney-121": {
+    styleID: "disney-121",
+    name: "Disney Character Coloring",
+    prompt: "Transform people in this image into Disney-style animated characters with classic Disney animation aesthetic, then convert to a coloring book page with clean outlines ready for coloring.",
+    styleJson: `<prompt>
+  <style>Disney Character Coloring</style>
+  <characterTransformation>
+    <aesthetic>Classic Disney animation style with round, appealing forms</aesthetic>
+    <features>
+      <face>Large expressive eyes, simplified facial features with Disney proportions</face>
+      <body>Slightly exaggerated, animated proportions with fluid, graceful lines</body>
+      <expressions>Heightened emotional expressiveness characteristic of Disney animation</expressions>
+    </features>
+    <movement>Sense of life and energy even in static poses</movement>
+    <appeal>Charming, friendly appearance with Disney's signature warmth</appeal>
+  </characterTransformation>
+  <artStyle>
+    <technique>Clean black outlines with Disney-style character design</technique>
+    <linework>Smooth, flowing lines with varied weight emphasizing form</linework>
+    <details>Simplified but characteristic details defining Disney aesthetic</details>
+    <spaces>Well-defined coloring areas perfect for bringing characters to life</spaces>
+  </artStyle>
+  <composition>
+    <elements>People transformed into recognizable Disney-style characters</elements>
+    <setting>Environment adapted to match animated Disney world aesthetic</setting>
+    <appeal>Wholesome, family-friendly design throughout</appeal>
+  </composition>
+  <technical>
+    <clarity>Clean, professional line quality suitable for coloring</clarity>
+    <character>Retention of individual personality traits in Disney style</character>
+    <consistency>Unified Disney aesthetic throughout the composition</consistency>
+  </technical>
+  <restrictions>
+    <maintain>Individual identities while applying Disney transformation</maintain>
+    <avoid>Realistic proportions or overly detailed rendering</avoid>
+    <copyright>Create original Disney-style characters without copying specific Disney characters</copyright>
+  </restrictions>
+</prompt>`
+  },
+
+  "disney-122": {
+    styleID: "disney-122",
+    name: "Disney Princess Coloring",
+    prompt: "Transform people in this image into Disney Princess-inspired characters with elegant, royal styling, then convert to a coloring book page with decorative details ready for coloring.",
+    styleJson: `<prompt>
+  <style>Disney Princess Coloring</style>
+  <characterTransformation>
+    <aesthetic>Disney Princess animation style with elegant, royal qualities</aesthetic>
+    <features>
+      <face>Large expressive eyes, delicate features, and graceful expressions</face>
+      <body>Regal posture, flowing movement, and princess-like proportions</body>
+      <clothing>Elaborate royal attire with decorative details and flowing fabrics</clothing>
+    </features>
+    <elegance>Graceful, refined appearance with princess-like nobility</elegance>
+    <accessories>Royal elements like tiaras, jewels, and royal emblems</accessories>
+  </characterTransformation>
+  <artStyle>
+    <technique>Refined black outlines with princess-inspired detailing</technique>
+    <linework>Elegant, flowing lines emphasizing grace and beauty</linework>
+    <details>Decorative elements like flowers, swirls, and royal motifs</details>
+    <spaces>Well-defined areas for coloring elaborate royal attire</spaces>
+  </artStyle>
+  <composition>
+    <elements>People transformed into princess-inspired royal characters</elements>
+    <setting>Fairy tale environment with castle elements or royal scenery</setting>
+    <magic>Subtle magical elements like sparkles or enchanted objects</magic>
+  </composition>
+  <technical>
+    <detail>Balance of simplicity with royal decorative elements</detail>
+    <fantasy>Enchanted, fairy tale quality throughout the design</fantasy>
+    <appeal>Beautiful, aspirational princess aesthetic</appeal>
+  </technical>
+  <restrictions>
+    <maintain>Individual identities while applying princess transformation</maintain>
+    <avoid>Exact copying of specific Disney princesses</avoid>
+    <copyright>Create original princess-inspired characters without copying specific Disney characters</copyright>
+  </restrictions>
+</prompt>`
+  },
+
+  "disney-123": {
+    styleID: "disney-123",
+    name: "Disney Villain Coloring",
+    prompt: "Transform people in this image into Disney Villain-inspired characters with dramatic, theatrical styling, then convert to a coloring book page with dynamic, shadowy details ready for coloring.",
+    styleJson: `<prompt>
+  <style>Disney Villain Coloring</style>
+  <characterTransformation>
+    <aesthetic>Disney Villain animation style with dramatic, theatrical qualities</aesthetic>
+    <features>
+      <face>Sharp features, arched eyebrows, and expressive villain-like expressions</face>
+      <body>Imposing posture, dramatic gestures, and commanding presence</body>
+      <clothing>Elaborate villain attire with angular designs and dramatic silhouettes</clothing>
+    </features>
+    <presence>Commanding, theatrical appearance with villainous charisma</presence>
+    <accessories>Dramatic elements like capes, staffs, or iconic villain props</accessories>
+  </characterTransformation>
+  <artStyle>
+    <technique>Bold black outlines with villain-inspired dramatic styling</technique>
+    <linework>Sharp, angular lines emphasizing dramatic character</linework>
+    <details>Gothic, shadowy elements and dramatic patterns</details>
+    <spaces>Well-defined areas for coloring theatrical villain attire</spaces>
+  </artStyle>
+  <composition>
+    <elements>People transformed into villain-inspired dramatic characters</elements>
+    <setting>Ominous environment with dramatic lighting or shadowy elements</setting>
+    <drama>Theatrical, stage-like quality to the overall presentation</drama>
+  </composition>
+  <technical>
+    <contrast>Strong dramatic elements for visual impact</contrast>
+    <theatricality>Expressive, larger-than-life character qualities</theatricality>
+    <appeal>Fascinating, charismatic villain aesthetic</appeal>
+  </technical>
+  <restrictions>
+    <maintain>Individual identities while applying villain transformation</maintain>
+    <avoid>Exact copying of specific Disney villains</avoid>
+    <copyright>Create original villain-inspired characters without copying specific Disney characters</copyright>
+    <appropriateness>Villainous but not frightening or inappropriate for coloring</appropriateness>
+  </restrictions>
+</prompt>`
   }
 };
 
