@@ -609,398 +609,283 @@ const STYLES: Record<string, StyleConfig> = {
     </restrictions>
   </prompt>`
   },
-  // Famous Artist Styles - Added for art style transformation feature
   "vangogh-101": {
     styleID: "vangogh-101",
     name: "Van Gogh's Starry Night",
-    prompt: "DO NOT TRANSFORM THE PERSON INTO VAN GOGH. This is critical. Apply ONLY Van Gogh's PAINTING TECHNIQUE to the image - the swirling patterns, bold brush strokes, vibrant blues and yellows. The subject must retain their EXACT SAME FACIAL FEATURES AND IDENTITY - they should look like themselves but as if painted in Van Gogh's Starry Night style. DO NOT give them Van Gogh's face, beard, ear bandage, or any resemblance to the artist himself.",
+    prompt: "Transform this into Van Gogh's Starry Night style with swirling, impasto brushstrokes and vibrant blues and yellows. Maintain the original composition while applying Van Gogh's distinctive night sky technique.",
     styleJson: `<prompt>
-    <style>Vincent Van Gogh's Starry Night</style>
-    <artistic_elements>
-      <technique>
-        <brushwork>Thick, visible brushstrokes with dynamic swirling patterns</brushwork>
-        <impasto>Heavy application of paint creating texture and dimension</impasto>
-        <strokes>Short, distinct, directional strokes that create movement</strokes>
-      </technique>
-      <colors>
-        <palette>Deep blues, vibrant yellows, cyans, and warm oranges</palette>
-        <contrast>High contrast between dark blue backgrounds and bright celestial elements</contrast>
-        <application>Colors applied in pure form rather than blended, creating vibrant impact</application>
-      </colors>
-      <composition>
-        <movement>Swirling, flowing patterns especially in sky elements</movement>
-        <rhythm>Undulating forms creating visual rhythm across the image</rhythm>
-        <perspective>Slightly distorted perspective with emphasis on emotional impact</perspective>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <distortion>NONE - do not distort the subject's facial features</distortion>
-      <emphasis>Preserve exact identity while applying painting style</emphasis>
-      <integration>Subject painted with Van Gogh brushwork without changing identity</integration>
-    </subject_treatment>
-    <background>
-      <style>Swirling, dynamic patterns especially in sky elements</style>
-      <elements>Stylized stars as bright yellow circular forms with radiating lines</elements>
-      <integration>Background flows into and around the subject</integration>
-    </background>
+    <style>Van Gogh's Starry Night</style>
+    <artStyle>
+      <technique>Thick, visible brushstrokes with impasto application showing texture and movement</technique>
+      <colors>Bold blues, deep violets, bright yellows and glowing oranges with high contrast</colors>
+      <linework>Dynamic, swirling strokes creating movement and energy</linework>
+      <lighting>Dramatic contrast between dark blue-violet shadows and radiant yellow-white highlights</lighting>
+      <textures>Thick, textured paint creating a sense of visual rhythm and movement</textures>
+    </artStyle>
+    <composition>
+      <elements>Swirling, turbulent skies with celestial bodies appearing to vibrate with energy</elements>
+      <perspective>Slightly elevated viewpoint with dreamlike spatial relations</perspective>
+      <focus>Emphasis on sky elements with distinctive swirling patterns</focus>
+    </composition>
+    <mood>
+      <feeling>Dramatic, emotional, transcendent</feeling>
+      <atmosphere>Magical night ambiance with cosmic energy</atmosphere>
+    </mood>
     <restrictions>
-      <maintain>Subject's EXACT facial features and identity</maintain>
-      <avoid>DO NOT make subject look like Van Gogh in ANY way</avoid>
-      <critical>Subject must NOT be transformed into Van Gogh himself</critical>
-      <preserve>Subject's unique identity and appearance</preserve>
+      <maintain>Original composition structure while applying the distinctive style</maintain>
     </restrictions>
   </prompt>`
   },
+
   "vangogh-102": {
     styleID: "vangogh-102",
     name: "Van Gogh's Self Portrait",
-    prompt: "DO NOT TRANSFORM THE PERSON INTO VAN GOGH. This is critical. Apply ONLY Van Gogh's PAINTING TECHNIQUE to the image - bold outlines, strong color contrasts, and visible brushwork. The subject must retain their EXACT SAME FACIAL FEATURES AND IDENTITY - they should look like themselves but as if painted in Van Gogh's style. DO NOT give them Van Gogh's face, beard, ear bandage, or any resemblance to the artist himself.",
+    prompt: "Transform this using Van Gogh's self-portrait style with bold, expressive brushwork, intense color, and psychological depth. Apply the distinctive complementary color palette and visible brushstrokes characteristic of his portraits.",
     styleJson: `<prompt>
-    <style>Vincent Van Gogh's Painting Technique</style>
-    <artistic_elements>
-      <technique>
-        <brushwork>Distinct, directional brushstrokes showing clear movement</brushwork>
-        <outlines>Bold, dark outlines defining features and forms</outlines>
-        <application>Textured paint application with visible thickness</application>
-      </technique>
-      <colors>
-        <palette>Rich earth tones, burnt sienna, ochres, deep greens, and vibrant blues</palette>
-        <contrast>Strong tonal contrasts between light and shadow areas</contrast>
-        <background>Muted but textured background with visible brushwork</background>
-      </colors>
-      <composition>
-        <focus>Maintain subject's own facial features and expression</focus>
-        <pose>Maintain subject's own pose</pose>
-        <framing>Tightly framed composition focusing on face and shoulders</framing>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <expression>Maintain subject's own expression</expression>
-      <features>DO NOT change facial features to resemble Van Gogh</features>
-      <presence>Maintain subject's own character and identity</presence>
-    </subject_treatment>
-    <background>
-      <style>Visible brushwork with swirling or directional strokes</style>
-      <color>Complementary to the subject with tonal variations</color>
-      <depth>Flat yet textured background focusing attention on the subject</depth>
-    </background>
+    <style>Van Gogh's Self Portrait</style>
+    <artStyle>
+      <technique>Vigorous, distinct brushstrokes revealing emotional intensity and texture</technique>
+      <colors>Striking complementary colors - blues against oranges, greens against reds with heightened intensity</colors>
+      <linework>Bold, directional strokes that follow facial contours and create movement</linework>
+      <lighting>Sharp contrasts and illuminated features against darker backgrounds</lighting>
+      <textures>Thick, layered paint application creating surface texture and dimension</textures>
+    </artStyle>
+    <portraiture>
+      <features>Exaggerated, emotionally expressive features with penetrating gaze</features>
+      <expression>Psychological intensity and inner emotional state made visible</expression>
+      <background>Swirling, animated backgrounds that echo the emotional state</background>
+    </portraiture>
+    <mood>
+      <feeling>Introspective, psychologically intense, melancholic</feeling>
+      <atmosphere>Intimate, revealing inner turmoil or contemplation</atmosphere>
+    </mood>
     <restrictions>
-      <maintain>Subject's EXACT facial features and identity</maintain>
-      <avoid>DO NOT make subject look like Van Gogh in ANY way</avoid>
-      <critical>Subject must NOT be transformed into Van Gogh himself</critical>
-      <preserve>Subject's unique identity and appearance</preserve>
+      <maintain>Subject's core identity while expressing psychological depth</maintain>
     </restrictions>
   </prompt>`
   },
+
   "picasso-103": {
     styleID: "picasso-103",
     name: "Picasso's Cubism",
-    prompt: "transform this image including the person/subject in the style of Pablo Picasso's Cubism with geometric fragmentation, multiple perspectives, and abstract representation. Completely transform the subject by breaking them down into angular shapes while maintaining some recognizable elements.",
+    prompt: "Transform this into Picasso's Cubist style, breaking forms into geometric shapes and showing multiple perspectives simultaneously. Use the fragmented, angular approach of analytical Cubism while maintaining recognizable elements.",
     styleJson: `<prompt>
-    <style>Pablo Picasso's Cubism</style>
-    <artistic_elements>
-      <technique>
-        <fragmentation>Breaking forms into geometric facets and planes</fragmentation>
-        <perspective>Multiple viewpoints shown simultaneously</perspective>
-        <abstraction>Reduction of natural forms to geometric shapes</abstraction>
-      </technique>
-      <colors>
-        <palette>Muted browns, grays, blacks with occasional blues and ochres</palette>
-        <application>Flat color planes with minimal gradation</application>
-        <contrast>Strong delineation between color planes</contrast>
-      </colors>
-      <composition>
-        <structure>Geometric organization with intersecting planes</structure>
-        <space>Compressed, flattened spatial relationships</space>
-        <arrangement>Fractured elements reassembled in surprising ways</arrangement>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <fragmentation>Subject broken into geometric facets showing multiple angles</fragmentation>
-      <features>Recognizable elements (eyes, nose, mouth) repositioned or duplicated</features>
-      <proportion>Intentionally distorted proportions serving compositional needs</proportion>
-    </subject_treatment>
-    <background>
-      <integration>Background and subject interpenetrate without clear boundaries</integration>
-      <elements>Geometric planes intersecting with the subject elements</elements>
-      <depth>Flattened picture plane with spatial ambiguity</depth>
-    </background>
+    <style>Picasso's Cubism</style>
+    <artStyle>
+      <technique>Geometric fragmentation and simultaneous multiple viewpoints</technique>
+      <colors>Muted palette of browns, grays, blacks with occasional brighter accents</colors>
+      <linework>Sharp, angular lines defining fragmented geometric planes</linework>
+      <lighting>Flattened with minimal traditional shading, focused on geometric relationships</lighting>
+      <textures>Faceted surfaces creating spatial ambiguity and complexity</textures>
+    </artStyle>
+    <composition>
+      <elements>Subjects broken into geometric fragments and reassembled from multiple angles</elements>
+      <perspective>Multiple simultaneous viewpoints rejecting single-point perspective</perspective>
+      <space>Compressed, ambiguous spatial relationships with overlapping planes</space>
+    </composition>
+    <concept>
+      <approach>Analytical deconstruction of form to reveal multiple dimensions simultaneously</approach>
+      <abstraction>Partial abstraction while maintaining recognizable elements</abstraction>
+    </concept>
     <restrictions>
-      <maintain>Some recognizable elements of the subject despite abstraction</maintain>
-      <avoid>Realistic shading or perspective that would contradict cubist principles</avoid>
+      <maintain>Core recognizable elements while applying cubist fragmentation</maintain>
     </restrictions>
   </prompt>`
   },
+
   "frida-104": {
     styleID: "frida-104",
     name: "Frida Kahlo",
-    prompt: "transform this image including the person/subject in the style of Frida Kahlo's self-portraits with bold colors, folkloric elements, and symbolic imagery. Completely transform the subject with a frontal, symmetrical composition, surreal elements, and emotional intensity while maintaining recognizable features.",
+    prompt: "Transform this in Frida Kahlo's distinctive surrealist style with bold colors, Mexican folk art influences, and symbolic elements. Capture her raw emotional honesty and dream-like symbolism.",
     styleJson: `<prompt>
-    <style>Frida Kahlo's Self-Portraits</style>
-    <artistic_elements>
-      <technique>
-        <brushwork>Smooth, meticulous application with fine details</brushwork>
-        <precision>Carefully rendered elements with folk art influence</precision>
-        <symbolism>Incorporation of symbolic objects and natural elements</symbolism>
-      </technique>
-      <colors>
-        <palette>Vibrant Mexican folk palette with rich reds, yellows, greens, and blues</palette>
-        <contrast>Strong color contrasts with minimal gradation</contrast>
-        <application>Flat color fields with decorative patterns</application>
-      </colors>
-      <composition>
-        <framing>Frontal, symmetrical composition with direct gaze</framing>
-        <background>Symbolic background elements relating to identity or emotions</background>
-        <structure>Formal, almost icon-like presentation</structure>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <expression>Direct, unflinching gaze with emotional intensity</expression>
-      <features>Slightly exaggerated features with emphasis on eyes and facial hair</features>
-      <accessories>Symbolic jewelry, flowers, or headpieces crowning the subject</accessories>
-    </subject_treatment>
-    <background>
-      <elements>Natural elements like plants, animals, or symbolic objects</elements>
-      <style>Flat perspective with decorative patterns</style>
-      <meaning>Background elements carrying personal or cultural symbolism</meaning>
-    </background>
+    <style>Frida Kahlo</style>
+    <artStyle>
+      <technique>Meticulous detail with flat, folk-art inspired approach</technique>
+      <colors>Vibrant, saturated Mexican palette with earthy reds, bright blues, and tropical greens</colors>
+      <linework>Clean, distinct outlines with careful attention to small details</linework>
+      <lighting>Symbolic rather than naturalistic lighting with minimal shadows</lighting>
+      <textures>Smooth application with attention to decorative patterns and natural elements</textures>
+    </artStyle>
+    <composition>
+      <elements>Central figure often dominating the composition with symbolic background elements</elements>
+      <symbolism>Integration of Mexican cultural imagery, natural elements, and personal symbols</symbolism>
+      <perspective>Frontal, direct presentation with dreamlike spatial relationships</perspective>
+    </composition>
+    <mood>
+      <feeling>Raw emotional honesty, pain, resilience, and cultural pride</feeling>
+      <atmosphere>Magical realism blending reality with symbolic dreamscapes</atmosphere>
+    </mood>
     <restrictions>
-      <maintain>Subject's identity while applying Kahlo's distinctive style</maintain>
-      <avoid>Overly modernized elements that would break the historical context</avoid>
+      <maintain>Emotional authenticity while incorporating symbolic elements</maintain>
     </restrictions>
   </prompt>`
   },
+
   "warhol-105": {
     styleID: "warhol-105",
     name: "Andy Warhol",
-    prompt: "transform this image including the person/subject in the style of Andy Warhol's pop art portraits with bold, flat colors, high contrast, and screen-printed appearance. Completely transform the subject with vibrant, complementary colors in distinct sections while maintaining recognizable features.",
+    prompt: "Transform this in Andy Warhol's Pop Art style with bold, flat colors, repeated imagery, and commercial printing aesthetics. Apply bright, unnatural colors and screen printing-like effects characteristic of his iconic works.",
     styleJson: `<prompt>
-    <style>Andy Warhol's Pop Art Portraits</style>
-    <artistic_elements>
-      <technique>
-        <application>Flat, screen-printed appearance with clear color separation</application>
-        <reduction>Simplified forms with high contrast</reduction>
-        <repetition>Potential for repeated image with color variations</repetition>
-      </technique>
-      <colors>
-        <palette>Bold, non-naturalistic colors like hot pink, electric blue, bright yellow</palette>
-        <contrast>High contrast between dark outlines and bright color fields</contrast>
-        <separation>Clear divisions between color areas with minimal blending</separation>
-      </colors>
-      <composition>
-        <structure>Organized in clear sections with distinct color blocks</structure>
-        <background>Flat color field contrasting with the subject</background>
-        <treatment>Photo-based transformation with simplified details</treatment>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <features>High contrast rendering of facial features</features>
-      <details>Elimination of subtle details in favor of bold shapes</details>
-      <shadows>Areas of shadow reduced to simple shapes in contrasting colors</shadows>
-    </subject_treatment>
-    <background>
-      <style>Solid color field or minimal geometric pattern</style>
-      <color>Vibrant, non-naturalistic color contrasting with subject</color>
-      <simplicity>Minimal detail to emphasize the subject</simplicity>
-    </background>
+    <style>Andy Warhol</style>
+    <artStyle>
+      <technique>Screen print aesthetic with flat color application and mechanical reproduction qualities</technique>
+      <colors>Bold, non-naturalistic, high-contrast colors with dramatic combinations</colors>
+      <linework>Strong, simplified black outlines reminiscent of commercial printing</linework>
+      <lighting>Flattened with dramatic high-contrast rather than subtle shading</lighting>
+      <textures>Smooth color fields with occasional deliberate printing imperfections</textures>
+    </artStyle>
+    <composition>
+      <elements>Simplified iconic imagery, often repeated in grid formations</elements>
+      <treatment>Mass media and commercial visual language applied to artistic subjects</treatment>
+      <approach>Transformation of ordinary subjects into iconic, abstracted imagery</approach>
+    </composition>
+    <concept>
+      <theme>Celebrity culture, consumerism, and mass production</theme>
+      <aesthetic>Combination of mechanical reproduction with artistic intervention</aesthetic>
+    </concept>
     <restrictions>
-      <maintain>Subject's recognizable features despite simplification</maintain>
-      <avoid>Realistic shading or naturalistic colors</avoid>
+      <maintain>Recognizable subject while applying bold pop art treatment</maintain>
     </restrictions>
   </prompt>`
   },
+
   "monet-106": {
     styleID: "monet-106",
     name: "Claude Monet",
-    prompt: "transform this image including the person/subject in the style of Claude Monet's Impressionism with soft, dabbed brushwork, open composition, and emphasis on light effects. Completely transform the subject with changing qualities of light, visible brushstrokes, and vibrant yet natural colors.",
+    prompt: "Transform this in Claude Monet's Impressionist style with loose brushwork capturing the ephemeral effects of light and atmosphere. Apply his distinctive technique of visible brushstrokes and color vibration to create a luminous impression.",
     styleJson: `<prompt>
-    <style>Claude Monet's Impressionism</style>
-    <artistic_elements>
-      <technique>
-        <brushwork>Small, visible dabs of paint creating texture</brushwork>
-        <blending>Colors mixed optically rather than on the palette</blending>
-        <application>Loose, sketch-like quality with emphasis on light effects</application>
-      </technique>
-      <colors>
-        <palette>Pastel tones, lavenders, soft blues, pinks, and yellows</palette>
-        <light>Emphasis on how light affects color at different times of day</light>
-        <shadows>Colored shadows using purples and blues rather than black</shadows>
-      </colors>
-      <composition>
-        <structure>Open composition with elements extending beyond the frame</structure>
-        <perspective>Atmospheric perspective with softer edges in distance</perspective>
-        <focus>Emphasis on overall impression rather than detailed rendering</focus>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <rendering>Soft edges with forms suggested rather than precisely defined</rendering>
-      <light>Subject modulated by light effects and reflections</light>
-      <detail>Focus on capturing light's effect on the subject rather than minute details</detail>
-    </subject_treatment>
-    <background>
-      <integration>Subject and background unified through consistent brushwork</integration>
-      <atmosphere>Sense of air and atmosphere throughout the scene</atmosphere>
-      <light>Background affected by same light conditions as the subject</light>
-    </background>
+    <style>Claude Monet</style>
+    <artStyle>
+      <technique>Broken brushwork with small, visible touches of pure color placed side by side</technique>
+      <colors>Subtle, luminous palette with emphasis on light effects and atmospheric colors</colors>
+      <linework>Dissolved contours with forms defined by color relationships rather than lines</linework>
+      <lighting>Emphasis on natural light effects, reflections, and time-of-day atmospheric conditions</lighting>
+      <textures>Varied brushwork creating vibrating surface textures that merge at a distance</textures>
+    </artStyle>
+    <composition>
+      <elements>Landscape elements or scenes captured in momentary light conditions</elements>
+      <perspective>Often elevated viewpoint with atmospheric perspective effects</perspective>
+      <focus>Emphasis on light, atmosphere and sensory impression over detailed rendering</focus>
+    </composition>
+    <mood>
+      <feeling>Tranquil, contemplative, ephemeral</feeling>
+      <atmosphere>Sensitive to atmospheric conditions - misty, sunny, or reflecting water</atmosphere>
+    </mood>
     <restrictions>
-      <maintain>Natural setting and lighting logic</maintain>
-      <avoid>Sharp lines, photorealistic details, or hard edges</avoid>
+      <maintain>Natural light qualities while applying impressionist technique</maintain>
     </restrictions>
   </prompt>`
   },
+
   "davinci-107": {
     styleID: "davinci-107",
     name: "Leonardo da Vinci",
-    prompt: "transform this image including the person/subject in the style of Leonardo da Vinci with subtle modeling, soft sfumato technique, and Renaissance composition. Completely transform the subject with meticulous attention to anatomical detail, subtle shading, and a warm, muted color palette.",
+    prompt: "Transform this in Leonardo da Vinci's Renaissance style with subtle modeling, sfumato technique, and meticulous attention to anatomical and natural detail. Apply his masterful perspective and atmospheric depth.",
     styleJson: `<prompt>
-    <style>Leonardo da Vinci's Renaissance Style</style>
-    <artistic_elements>
-      <technique>
-        <sfumato>Soft, smoky transitions between colors without harsh lines</sfumato>
-        <modeling>Subtle gradations of light and shadow creating three-dimensional forms</modeling>
-        <precision>Meticulous attention to anatomical detail and proportion</precision>
-      </technique>
-      <colors>
-        <palette>Warm earth tones, browns, ochres, and muted blues</palette>
-        <application>Smooth blending with oil painting appearance</application>
-        <harmony>Subtle color harmony throughout the composition</harmony>
-      </colors>
-      <composition>
-        <structure>Balanced, harmonious arrangement with classical proportions</structure>
-        <perspective>Accurate linear perspective with atmospheric depth</perspective>
-        <pose>Dignified pose with psychological presence</pose>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <features>Idealized yet naturalistic features with perfect proportions</features>
-      <expression>Subtle, enigmatic expression with psychological depth</expression>
-      <anatomy>Accurate anatomical rendering with understanding of underlying structures</anatomy>
-    </subject_treatment>
-    <background>
-      <landscape>Detailed natural elements with atmospheric perspective</landscape>
-      <architecture>Classical architectural elements if included</architecture>
-      <depth>Gradual fading into distance with aerial perspective</depth>
-    </background>
+    <style>Leonardo da Vinci</style>
+    <artStyle>
+      <technique>Sfumato (smoke-like) gradual transitions between colors without harsh lines</technique>
+      <colors>Subtle earth tones with warm amber undertones and cool blue-grays</colors>
+      <linework>Refined, precise underdrawing with softened edges in final rendering</linework>
+      <lighting>Soft, directional lighting with masterful chiaroscuro modeling of form</lighting>
+      <textures>Smooth transitions with meticulous attention to surface qualities</textures>
+    </artStyle>
+    <composition>
+      <elements>Precisely observed natural forms with scientific accuracy</elements>
+      <perspective>Mathematical precision in spatial relationships and perspective</perspective>
+      <proportion>Golden ratio and classical proportions in arrangement of elements</proportion>
+    </composition>
+    <detail>
+      <anatomical>Scientifically accurate rendering of musculature and structure</anatomical>
+      <natural>Careful observation of botanical and geological elements</natural>
+      <technical>Engineering-like precision in depicting mechanical relationships</technical>
+    </detail>
     <restrictions>
-      <maintain>Classical dignity and anatomical accuracy</maintain>
-      <avoid>Modern elements or expressions that would break the Renaissance aesthetic</avoid>
+      <maintain>Scientific accuracy while applying Renaissance aesthetic</maintain>
     </restrictions>
   </prompt>`
   },
+
   "klimt-108": {
     styleID: "klimt-108",
     name: "Gustav Klimt",
-    prompt: "transform this image including the person/subject in the style of Gustav Klimt with ornate gold patterns, decorative motifs, and symbolic imagery. Completely transform the subject with flat, decorative areas combined with realistic elements and incorporate rich textures and Byzantine-inspired gold details.",
+    prompt: "Transform this in Gustav Klimt's ornate Art Nouveau style with lavish gold decoration, intricate patterns, and symbolist elements. Apply his distinctive combination of realistic portraiture with decorative, flattened ornamentation.",
     styleJson: `<prompt>
-    <style>Gustav Klimt's Golden Phase</style>
-    <artistic_elements>
-      <technique>
-        <ornamentation>Elaborate decorative patterns and symbolic motifs</ornamentation>
-        <gilding>Gold leaf appearance in decorative elements</gilding>
-        <contrast>Flat decorative areas alongside realistic elements</contrast>
-      </technique>
-      <colors>
-        <palette>Rich golds, deep reds, blues, greens with metallic appearance</palette>
-        <application>Mosaic-like areas of color with detailed patterns</application>
-        <contrast>Ornate patterned areas against more subdued realistic portions</contrast>
-      </colors>
-      <composition>
-        <flatness>Compressed spatial depth with emphasis on decorative surface</flatness>
-        <pattern>Repetitive geometric patterns creating visual rhythm</pattern>
-        <symbolism>Abstract and symbolic elements integrated into design</symbolism>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <face>Realistic rendering of face and hands amidst decorative elements</face>
-      <body>Body often merged with or enveloped by ornamental patterns</body>
-      <clothing>Clothing transformed into elaborate decorative fields</clothing>
-    </subject_treatment>
-    <background>
-      <integration>Background and subject merge through consistent patterning</integration>
-      <flatness>Minimal spatial depth with emphasis on decorative surface</flatness>
-      <elements>Byzantine-inspired mosaic patterns and symbolic shapes</elements>
-    </background>
+    <style>Gustav Klimt</style>
+    <artStyle>
+      <technique>Combination of realistic elements with decorative, pattern-filled surfaces</technique>
+      <colors>Rich golds, deep reds, cool blues with metallic and jewel-like qualities</colors>
+      <linework>Elegant, sinuous outlines with Byzantine-inspired decorative elements</linework>
+      <lighting>Symbolic rather than natural, with emphasis on golden illumination</lighting>
+      <textures>Elaborate mosaic-like patterns with gold leaf and ornamental details</textures>
+    </artStyle>
+    <composition>
+      <elements>Realistic figures embedded in fields of abstract, geometric pattern</elements>
+      <ornamentation>Lavish decorative elements inspired by Byzantine mosaics and Art Nouveau</elements>
+      <space>Flattened, ambiguous spatial relationships with decorative backgrounds</space>
+    </composition>
+    <mood>
+      <feeling>Sensual, mysterious, luxurious</feeling>
+      <atmosphere>Dreamlike merger of reality with decorative symbolism</atmosphere>
+    </mood>
     <restrictions>
-      <maintain>Facial realism amidst decorative elements</maintain>
-      <avoid>Deep perspective or realistic spatial arrangements</avoid>
+      <maintain>Essential portrait elements while applying ornate decorative treatment</maintain>
     </restrictions>
   </prompt>`
   },
+
   "dali-109": {
     styleID: "dali-109",
     name: "Salvador Dalí",
-    prompt: "transform this image including the person/subject in the style of Salvador Dalí's Surrealism with dreamlike imagery, melting forms, and symbolic elements. Completely transform the subject with hyper-realistic rendering with impossible juxtapositions and distorted perspective while incorporating surreal dreamscape elements.",
+    prompt: "Transform this in Salvador Dalí's Surrealist style with dreamlike imagery, melting forms, and hyper-realistic rendering of impossible scenarios. Apply his distinctive combination of precise technique with bizarre juxtapositions.",
     styleJson: `<prompt>
-    <style>Salvador Dalí's Surrealism</style>
-    <artistic_elements>
-      <technique>
-        <rendering>Hyper-realistic rendering of impossible scenes</rendering>
-        <distortion>Melting, stretching, or morphing of familiar objects</distortion>
-        <juxtaposition>Unexpected combinations of unrelated elements</juxtaposition>
-      </technique>
-      <colors>
-        <palette>Warm earth tones, desert colors, with dramatic lighting</palette>
-        <sky>Often dramatic with unusual cloud formations or multiple light sources</sky>
-        <shadows>Long, dramatic shadows with symbolic significance</shadows>
-      </colors>
-      <composition>
-        <space>Vast, barren landscapes with strange perspective</space>
-        <scale>Dramatic size relationships between elements</scale>
-        <horizon>Low horizon line creating vast empty spaces</horizon>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <transformation>Subject partially melting, floating, or transforming</transformation>
-      <substitution>Parts replaced with symbolic objects or drawers</substitution>
-      <division>Subject potentially divided, duplicated, or fragmented</division>
-    </subject_treatment>
-    <background>
-      <landscape>Barren, dream-like landscape with impossible elements</landscape>
-      <objects>Symbolic objects like melting clocks, ants, or crutches</objects>
-      <perspective>Exaggerated perspective with multiple vanishing points</perspective>
-    </background>
+    <style>Salvador Dalí</style>
+    <artStyle>
+      <technique>Photographic precision in rendering impossible or dream-like scenarios</technique>
+      <colors>Stark contrasts with desert-like palette of ochres and blues with dramatic lighting</colors>
+      <linework>Precise, academic drawing technique with surreal distortions</linework>
+      <lighting>Dramatic, theatrical lighting with long shadows and glowing horizons</lighting>
+      <textures>Meticulous rendering of surface qualities even in impossible objects</textures>
+    </artStyle>
+    <composition>
+      <elements>Unexpected juxtapositions of objects in barren, dreamlike landscapes</elements>
+      <distortion>Melting, stretching, or morphing of familiar objects</distortion>
+      <symbolism>Personal symbolic vocabulary with recurring motifs like melting clocks</symbolism>
+    </composition>
+    <concept>
+      <approach>Dream logic and subconscious associations made visible</approach>
+      <reality>Bending of physical laws while maintaining convincing rendering</reality>
+    </concept>
     <restrictions>
-      <maintain>Photorealistic rendering despite impossible scenes</maintain>
-      <avoid>Abstraction that prevents recognition of transformed elements</avoid>
+      <maintain>Recognizable elements while applying surrealist transformation</maintain>
     </restrictions>
   </prompt>`
   },
+
   "hokusai-110": {
     styleID: "hokusai-110",
     name: "Hokusai",
-    prompt: "transform this image including the person/subject in the style of Katsushika Hokusai's ukiyo-e woodblock prints with flat areas of color, bold outlines, and stylized Japanese aesthetic. Completely transform the subject with distinctive wave-like patterns, limited color palette, and elegant line work typical of The Great Wave off Kanagawa.",
+    prompt: "Transform this in Hokusai's Japanese ukiyo-e woodblock print style with flat color areas, distinctive outlines, and rhythmic patterns. Apply his masterful composition and iconic wave-like curved lines.",
     styleJson: `<prompt>
-    <style>Hokusai's Ukiyo-e Woodblock Prints</style>
-    <artistic_elements>
-      <technique>
-        <linework>Bold, calligraphic outlines with varying thickness</linework>
-        <coloring>Flat areas of color without gradation</coloring>
-        <patterns>Stylized representation of natural elements like waves and clouds</patterns>
-      </technique>
-      <colors>
-        <palette>Limited palette with indigo blue, seafoam green, earth tones, and beige</palette>
-        <application>Flat color fields with minimal modulation</application>
-        <blocking>Clear separation between color areas</blocking>
-      </colors>
-      <composition>
-        <perspective>Flattened perspective with stacked spatial planes</perspective>
-        <framing>Dramatic cropping and asymmetrical balance</framing>
-        <rhythm>Repeating curved lines creating visual movement</rhythm>
-      </composition>
-    </artistic_elements>
-    <subject_treatment>
-      <stylization>Subject rendered with simplified, elegant lines</stylization>
-      <detail>Selective detail with emphasis on characteristic features</detail>
-      <lines>Strong contour lines defining the subject</lines>
-    </subject_treatment>
-    <background>
-      <elements>Stylized natural elements like Mount Fuji, waves, or clouds</elements>
-      <pattern>Repetitive patterns creating rhythm and movement</pattern>
-      <space>Compressed depth with layered planes</space>
-    </background>
+    <style>Hokusai</style>
+    <artStyle>
+      <technique>Woodblock print aesthetic with flat color areas and distinctive outlines</technique>
+      <colors>Limited palette centered on indigo blue, soft greens, and earth tones</colors>
+      <linework>Confident, calligraphic lines varying from delicate to bold</linework>
+      <lighting>Flat, decorative lighting without Western chiaroscuro</lighting>
+      <textures>Stylized patterns representing natural elements like water, clouds, and foliage</textures>
+    </artStyle>
+    <composition>
+      <elements>Rhythmic arrangement of forms with emphasis on natural patterns</elements>
+      <perspective>Flattened space with stacked planes rather than Western perspective</perspective>
+      <dynamism>Capturing motion through curved lines and dynamic diagonals</dynamism>
+    </composition>
+    <cultural>
+      <aesthetic>Japanese artistic conventions of simplified, stylized natural forms</aesthetic>
+      <symbolism>Traditional Japanese visual motifs and natural elements</symbolism>
+    </cultural>
     <restrictions>
-      <maintain>Japanese aesthetic and simplified elegance</maintain>
-      <avoid>Western perspective or shading techniques</avoid>
+      <maintain>Essential elements while applying ukiyo-e woodblock aesthetic</maintain>
     </restrictions>
   </prompt>`
   }
