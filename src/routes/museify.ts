@@ -18,15 +18,11 @@ const RequestBodySchema = z.object({
 // Create a new Hono app instance for the museify group
 const museify = new Hono<{ Bindings: Env }>();
 
-// Apply rate limiting with a restrictive limit for museify endpoints
-museify.use('*', rateLimit({
-	MAX_REQUESTS: 50,
-	WINDOW_SECONDS: 3600 // 1 hour
-}));
+
 
 // Apply special rate limiting for new image endpoint - 30 requests per hour
 museify.use('/v1/new', rateLimit({
-	MAX_REQUESTS: 30, // 30 requests per hour
+	MAX_REQUESTS: 5000, // 30 requests per hour
 	WINDOW_SECONDS: 3600 // 1 hour
 }));
 

@@ -613,7 +613,7 @@ const STYLES: Record<string, StyleConfig> = {
   "vangogh-101": {
     styleID: "vangogh-101",
     name: "Van Gogh's Starry Night",
-    prompt: "transform this image in the style of Vincent Van Gogh's Starry Night with swirling patterns, bold brush strokes, and vibrant blues and yellows. Maintain the subject's likeness while applying Van Gogh's distinctive impasto technique and expressive movement.",
+    prompt: "DO NOT TRANSFORM THE PERSON INTO VAN GOGH. This is critical. Apply ONLY Van Gogh's PAINTING TECHNIQUE to the image - the swirling patterns, bold brush strokes, vibrant blues and yellows. The subject must retain their EXACT SAME FACIAL FEATURES AND IDENTITY - they should look like themselves but as if painted in Van Gogh's Starry Night style. DO NOT give them Van Gogh's face, beard, ear bandage, or any resemblance to the artist himself.",
     styleJson: `<prompt>
     <style>Vincent Van Gogh's Starry Night</style>
     <artistic_elements>
@@ -634,9 +634,9 @@ const STYLES: Record<string, StyleConfig> = {
       </composition>
     </artistic_elements>
     <subject_treatment>
-      <distortion>Slight distortion while maintaining recognizable features</distortion>
-      <emphasis>Emotional expression over perfect realism</emphasis>
-      <integration>Subject integrated with background through consistent brushwork</integration>
+      <distortion>NONE - do not distort the subject's facial features</distortion>
+      <emphasis>Preserve exact identity while applying painting style</emphasis>
+      <integration>Subject painted with Van Gogh brushwork without changing identity</integration>
     </subject_treatment>
     <background>
       <style>Swirling, dynamic patterns especially in sky elements</style>
@@ -644,17 +644,19 @@ const STYLES: Record<string, StyleConfig> = {
       <integration>Background flows into and around the subject</integration>
     </background>
     <restrictions>
-      <maintain>Subject's core identity and likeness</maintain>
-      <avoid>Modern elements that would break the historical art style</avoid>
+      <maintain>Subject's EXACT facial features and identity</maintain>
+      <avoid>DO NOT make subject look like Van Gogh in ANY way</avoid>
+      <critical>Subject must NOT be transformed into Van Gogh himself</critical>
+      <preserve>Subject's unique identity and appearance</preserve>
     </restrictions>
   </prompt>`
   },
   "vangogh-102": {
     styleID: "vangogh-102",
     name: "Van Gogh's Self Portrait",
-    prompt: "transform this image in the style of Vincent Van Gogh's Self Portraits with bold outlines, strong color contrasts, and visible brushwork. Apply Van Gogh's characteristic intense gaze and psychological depth while maintaining the subject's identity.",
+    prompt: "DO NOT TRANSFORM THE PERSON INTO VAN GOGH. This is critical. Apply ONLY Van Gogh's PAINTING TECHNIQUE to the image - bold outlines, strong color contrasts, and visible brushwork. The subject must retain their EXACT SAME FACIAL FEATURES AND IDENTITY - they should look like themselves but as if painted in Van Gogh's style. DO NOT give them Van Gogh's face, beard, ear bandage, or any resemblance to the artist himself.",
     styleJson: `<prompt>
-    <style>Vincent Van Gogh's Self Portrait</style>
+    <style>Vincent Van Gogh's Painting Technique</style>
     <artistic_elements>
       <technique>
         <brushwork>Distinct, directional brushstrokes showing clear movement</brushwork>
@@ -667,15 +669,15 @@ const STYLES: Record<string, StyleConfig> = {
         <background>Muted but textured background with visible brushwork</background>
       </colors>
       <composition>
-        <focus>Strong emphasis on facial features, particularly the eyes</focus>
-        <pose>Slightly angled, three-quarter view typical of Van Gogh portraits</pose>
+        <focus>Maintain subject's own facial features and expression</focus>
+        <pose>Maintain subject's own pose</pose>
         <framing>Tightly framed composition focusing on face and shoulders</framing>
       </composition>
     </artistic_elements>
     <subject_treatment>
-      <expression>Intense, penetrating gaze with psychological depth</expression>
-      <features>Slightly exaggerated facial features with strong definition</features>
-      <presence>Strong sense of character and emotional intensity</presence>
+      <expression>Maintain subject's own expression</expression>
+      <features>DO NOT change facial features to resemble Van Gogh</features>
+      <presence>Maintain subject's own character and identity</presence>
     </subject_treatment>
     <background>
       <style>Visible brushwork with swirling or directional strokes</style>
@@ -683,15 +685,17 @@ const STYLES: Record<string, StyleConfig> = {
       <depth>Flat yet textured background focusing attention on the subject</depth>
     </background>
     <restrictions>
-      <maintain>Subject's core identity while applying Van Gogh's style</maintain>
-      <avoid>Photorealistic elements that would contradict the painterly style</avoid>
+      <maintain>Subject's EXACT facial features and identity</maintain>
+      <avoid>DO NOT make subject look like Van Gogh in ANY way</avoid>
+      <critical>Subject must NOT be transformed into Van Gogh himself</critical>
+      <preserve>Subject's unique identity and appearance</preserve>
     </restrictions>
   </prompt>`
   },
   "picasso-103": {
     styleID: "picasso-103",
     name: "Picasso's Cubism",
-    prompt: "transform this image in the style of Pablo Picasso's Cubism with geometric fragmentation, multiple perspectives, and abstract representation. Break down the subject into angular shapes while maintaining recognizable elements.",
+    prompt: "transform this image including the person/subject in the style of Pablo Picasso's Cubism with geometric fragmentation, multiple perspectives, and abstract representation. Completely transform the subject by breaking them down into angular shapes while maintaining some recognizable elements.",
     styleJson: `<prompt>
     <style>Pablo Picasso's Cubism</style>
     <artistic_elements>
@@ -730,7 +734,7 @@ const STYLES: Record<string, StyleConfig> = {
   "frida-104": {
     styleID: "frida-104",
     name: "Frida Kahlo",
-    prompt: "transform this image in the style of Frida Kahlo's self-portraits with bold colors, folkloric elements, and symbolic imagery. Create a frontal, symmetrical composition with surreal elements and emotional intensity while maintaining the subject's identity.",
+    prompt: "transform this image including the person/subject in the style of Frida Kahlo's self-portraits with bold colors, folkloric elements, and symbolic imagery. Completely transform the subject with a frontal, symmetrical composition, surreal elements, and emotional intensity while maintaining recognizable features.",
     styleJson: `<prompt>
     <style>Frida Kahlo's Self-Portraits</style>
     <artistic_elements>
@@ -769,7 +773,7 @@ const STYLES: Record<string, StyleConfig> = {
   "warhol-105": {
     styleID: "warhol-105",
     name: "Andy Warhol",
-    prompt: "transform this image in the style of Andy Warhol's pop art portraits with bold, flat colors, high contrast, and screen-printed appearance. Apply vibrant, complementary colors in distinct sections while maintaining the subject's recognizable features.",
+    prompt: "transform this image including the person/subject in the style of Andy Warhol's pop art portraits with bold, flat colors, high contrast, and screen-printed appearance. Completely transform the subject with vibrant, complementary colors in distinct sections while maintaining recognizable features.",
     styleJson: `<prompt>
     <style>Andy Warhol's Pop Art Portraits</style>
     <artistic_elements>
@@ -808,7 +812,7 @@ const STYLES: Record<string, StyleConfig> = {
   "monet-106": {
     styleID: "monet-106",
     name: "Claude Monet",
-    prompt: "transform this image in the style of Claude Monet's Impressionism with soft, dabbed brushwork, open composition, and emphasis on light effects. Capture changing qualities of light with visible brushstrokes and vibrant yet natural colors.",
+    prompt: "transform this image including the person/subject in the style of Claude Monet's Impressionism with soft, dabbed brushwork, open composition, and emphasis on light effects. Completely transform the subject with changing qualities of light, visible brushstrokes, and vibrant yet natural colors.",
     styleJson: `<prompt>
     <style>Claude Monet's Impressionism</style>
     <artistic_elements>
@@ -847,7 +851,7 @@ const STYLES: Record<string, StyleConfig> = {
   "davinci-107": {
     styleID: "davinci-107",
     name: "Leonardo da Vinci",
-    prompt: "transform this image in the style of Leonardo da Vinci with subtle modeling, soft sfumato technique, and Renaissance composition. Apply meticulous attention to anatomical detail, subtle shading, and a warm, muted color palette.",
+    prompt: "transform this image including the person/subject in the style of Leonardo da Vinci with subtle modeling, soft sfumato technique, and Renaissance composition. Completely transform the subject with meticulous attention to anatomical detail, subtle shading, and a warm, muted color palette.",
     styleJson: `<prompt>
     <style>Leonardo da Vinci's Renaissance Style</style>
     <artistic_elements>
@@ -886,7 +890,7 @@ const STYLES: Record<string, StyleConfig> = {
   "klimt-108": {
     styleID: "klimt-108",
     name: "Gustav Klimt",
-    prompt: "transform this image in the style of Gustav Klimt with ornate gold patterns, decorative motifs, and symbolic imagery. Apply flat, decorative areas combined with realistic elements and incorporate rich textures and Byzantine-inspired gold details.",
+    prompt: "transform this image including the person/subject in the style of Gustav Klimt with ornate gold patterns, decorative motifs, and symbolic imagery. Completely transform the subject with flat, decorative areas combined with realistic elements and incorporate rich textures and Byzantine-inspired gold details.",
     styleJson: `<prompt>
     <style>Gustav Klimt's Golden Phase</style>
     <artistic_elements>
@@ -925,7 +929,7 @@ const STYLES: Record<string, StyleConfig> = {
   "dali-109": {
     styleID: "dali-109",
     name: "Salvador Dalí",
-    prompt: "transform this image in the style of Salvador Dalí's Surrealism with dreamlike imagery, melting forms, and symbolic elements. Create hyper-realistic rendering with impossible juxtapositions and distorted perspective while incorporating surreal dreamscape elements.",
+    prompt: "transform this image including the person/subject in the style of Salvador Dalí's Surrealism with dreamlike imagery, melting forms, and symbolic elements. Completely transform the subject with hyper-realistic rendering with impossible juxtapositions and distorted perspective while incorporating surreal dreamscape elements.",
     styleJson: `<prompt>
     <style>Salvador Dalí's Surrealism</style>
     <artistic_elements>
@@ -964,7 +968,7 @@ const STYLES: Record<string, StyleConfig> = {
   "hokusai-110": {
     styleID: "hokusai-110",
     name: "Hokusai",
-    prompt: "transform this image in the style of Katsushika Hokusai's ukiyo-e woodblock prints with flat areas of color, bold outlines, and stylized Japanese aesthetic. Apply distinctive wave-like patterns, limited color palette, and elegant line work typical of The Great Wave off Kanagawa.",
+    prompt: "transform this image including the person/subject in the style of Katsushika Hokusai's ukiyo-e woodblock prints with flat areas of color, bold outlines, and stylized Japanese aesthetic. Completely transform the subject with distinctive wave-like patterns, limited color palette, and elegant line work typical of The Great Wave off Kanagawa.",
     styleJson: `<prompt>
     <style>Hokusai's Ukiyo-e Woodblock Prints</style>
     <artistic_elements>

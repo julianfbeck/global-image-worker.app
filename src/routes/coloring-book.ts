@@ -25,11 +25,7 @@ coloringBook.use('*', async (c, next) => {
 	await next();
 });
 
-// Apply rate limiting with a more restrictive limit for coloring-book endpoints
-coloringBook.use('*', rateLimit({
-	MAX_REQUESTS: 50,
-	WINDOW_SECONDS: 3600 // 1 hour
-}));
+
 
 // Apply special rate limiting for new image endpoint - 30 requests per hour
 coloringBook.use('/v1/new', rateLimit({
