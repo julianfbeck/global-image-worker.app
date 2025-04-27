@@ -28,4 +28,5 @@ export interface QueueMessage {
 	userID: string;
 	timestamp: number;
 	requestId: string;
+	useOpenAI: boolean;
 } 

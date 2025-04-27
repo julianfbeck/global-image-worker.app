@@ -3,6 +3,7 @@ import { Queue, MessageBatch } from '@cloudflare/workers-types';
 import { generatePrompt } from '../services/promptGenerator';
 import { createGeminiService } from '../services/geminiService';
 import type { Env, QueueMessage } from '../types';
+import { createOpenAIService } from '../services/openaiService';
 
 export class ImageQueueConsumer {
 	constructor(private readonly queue: Queue) { }
@@ -70,11 +71,22 @@ export class ImageQueueConsumer {
 
 				// Process the image with Gemini
 				console.log('Processing image with Gemini...');
-				const processedImageData = await geminiService.processImage(
-					imageData,
-					message.body.image.mime_type,
-					prompt
-				);
+
+				let processedImageData: ArrayBuffer;
+				if (message.body.useOpenAI) {
+					const openaiService = createOpenAIService(env.OPENAI_API_KEY);
+					processedImageData = await openaiService.processImage(
+						imageData,
+						message.body.image.mime_type,
+						prompt
+					);
+				} else {
+					processedImageData = await geminiService.processImage(
+						imageData,
+						message.body.image.mime_type,
+						prompt
+					);
+				}
 
 				// Store the processed image in R2
 				const processedImageKey = `processed/${message.body.requestId}.png`;
