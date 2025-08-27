@@ -92,7 +92,7 @@ museify.post('/v1/new', async (c) => {
 			userID: requestData.userID,
 			timestamp: Date.now(),
 			requestId,
-			useOpenAI: true 
+			useOpenAI: false 
 		};
 
 		// Add the message to the image queue

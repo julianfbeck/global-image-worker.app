@@ -4,6 +4,7 @@ import { generatePrompt } from '../services/promptGenerator';
 import { createGeminiService } from '../services/geminiService';
 import type { Env, QueueMessage } from '../types';
 import { createOpenAIService } from '../services/openaiService';
+import { telegramService } from '../services/telegramService';
 
 export class ImageQueueConsumer {
 	constructor(private readonly queue: Queue) { }
@@ -51,6 +52,7 @@ export class ImageQueueConsumer {
 				const imageObject = await env.IMAGES.get(message.body.image.key);
 				if (!imageObject) {
 					console.error(`Image not found in R2: ${message.body.image.key}`);
+					await telegramService.sendImageRetrievalFailure(message.body.image.key, message.body.requestId);
 					await redis.set(message.body.requestId, "failed");
 					message.ack();
 					continue;
@@ -63,8 +65,15 @@ export class ImageQueueConsumer {
 				const geminiService = createGeminiService(env.GOOGLE_API_KEY);
 
 				// Analyze the image using Gemini
-				const imageContext = await geminiService.analyzeImage(imageData, message.body.image.mime_type);
-				console.log(imageContext);
+				let imageContext: string;
+				try {
+					imageContext = await geminiService.analyzeImage(imageData, message.body.image.mime_type);
+					console.log(imageContext);
+				} catch (analysisError) {
+					const errorMsg = analysisError instanceof Error ? analysisError.message : String(analysisError);
+					await telegramService.sendImageAnalysisFailure(errorMsg, message.body.requestId, message.body.userID);
+					throw analysisError;
+				}
 
 				// Generate the appropriate prompt based on styleID and image context
 				const prompt = generatePrompt(message.body.styleID, imageContext);
@@ -73,28 +82,41 @@ export class ImageQueueConsumer {
 				console.log('Processing image with Gemini...');
 
 				let processedImageData: ArrayBuffer;
-				if (message.body.useOpenAI) {
-					const openaiService = createOpenAIService(env.OPENAI_API_KEY);
-					processedImageData = await openaiService.processImage(
-						imageData,
-						message.body.image.mime_type,
-						prompt
-					);
-				} else {
-					processedImageData = await geminiService.processImage(
-						imageData,
-						message.body.image.mime_type,
-						prompt
-					);
+				try {
+					if (message.body.useOpenAI) {
+						const openaiService = createOpenAIService(env.OPENAI_API_KEY);
+						processedImageData = await openaiService.processImage(
+							imageData,
+							message.body.image.mime_type,
+							prompt
+						);
+					} else {
+						processedImageData = await geminiService.processImage(
+							imageData,
+							message.body.image.mime_type,
+							prompt
+						);
+					}
+				} catch (generationError) {
+					const errorMsg = generationError instanceof Error ? generationError.message : String(generationError);
+					const service = message.body.useOpenAI ? 'openai' : 'gemini';
+					await telegramService.sendImageGenerationFailure(errorMsg, message.body.requestId, message.body.userID, service);
+					throw generationError;
 				}
 
 				// Store the processed image in R2
 				const processedImageKey = `processed/${message.body.requestId}.png`;
-				await env.IMAGES.put(processedImageKey, processedImageData, {
-					httpMetadata: {
-						contentType: 'image/png' // Gemini always returns PNG
-					}
-				});
+				try {
+					await env.IMAGES.put(processedImageKey, processedImageData, {
+						httpMetadata: {
+							contentType: 'image/png' // Gemini always returns PNG
+						}
+					});
+				} catch (storageError) {
+					const errorMsg = storageError instanceof Error ? storageError.message : String(storageError);
+					await telegramService.sendImageStorageFailure(errorMsg, message.body.requestId, message.body.userID);
+					throw storageError;
+				}
 
 				// Update state to completed
 				await redis.set(message.body.requestId, "completed");
@@ -110,10 +132,20 @@ export class ImageQueueConsumer {
 					(error.message && error.message.includes('429'))
 				)) {
 					console.log(`Rate limit hit for request ${message.body.requestId}, will retry automatically`);
+					// Send Telegram notification for rate limit
+					const service = message.body.useOpenAI ? 'openai' : 'gemini';
+					await telegramService.sendRateLimitError(service, message.body.requestId, message.body.userID);
 					// Don't acknowledge the message - this will cause it to be retried
 					message.retry();
 				} else {
-					// For other errors, mark as failed and acknowledge
+					// For other errors, send notification and mark as failed
+					const errorMsg = error instanceof Error ? error.message : String(error);
+					await telegramService.sendProcessingFailure(
+						`General processing error: ${errorMsg}`,
+						message.body.requestId,
+						message.body.userID,
+						message.body.image.key
+					);
 					await redis.set(message.body.requestId, "failed");
 					await redis.expire(message.body.requestId, 60 * 60 * 24);
 					message.ack();
