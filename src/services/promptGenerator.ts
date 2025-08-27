@@ -889,35 +889,37 @@ const STYLES: Record<string, StyleConfig> = {
     </restrictions>
   </prompt>`
   },
+
   "colorbook-111": {
     styleID: "colorbook-111",
-    name: "Coloring Book",
-    prompt: "Transform this into a coloring book page with clean, bold outlines and empty spaces ready to be filled with color. Create distinct areas with clear boundaries while maintaining the essential elements of the original image.",
+    name: "Children's Coloring Book",
+    prompt: "Transform this into a simple children's coloring book page with large, bold outlines, simplified forms, and ample coloring spaces perfect for young children.",
     styleJson: `<prompt>
-    <style>Coloring Book</style>
-    <artStyle>
-      <technique>Bold black outlines with completely white fill areas</technique>
-      <linework>Clean, continuous black lines of consistent weight defining all shapes</linework>
-      <details>Simplified interior details with patterns and texture indicators</details>
-      <spaces>Well-defined empty areas of appropriate size for coloring</spaces>
-      <complexity>Balance between detail and simplicity for an engaging coloring experience</complexity>
-    </artStyle>
-    <composition>
-      <elements>Clear separation between distinct elements with defined boundaries</elements>
-      <balance>Mixture of larger areas and smaller details for varied coloring experience</balance>
-      <patterns>Optional interior patterns like dots, stripes, or simple textures</patterns>
-    </composition>
-    <technical>
-      <contrast>High contrast black and white with no grayscale</contrast>
-      <clarity>No ambiguous areas or bleeding between sections</clarity>
-      <printability>Design optimized for clear printing with sufficient line weight</printability>
-    </technical>
-    <restrictions>
-      <maintain>Essential elements and character of the original image</maintain>
-      <avoid>Shading, gradients, or filled areas that aren't pure white</avoid>
-    </restrictions>
-  </prompt>`
+  <style>Children's Coloring Book</style>
+  <artStyle>
+    <technique>Extra bold black outlines with very simplified forms</technique>
+    <linework>Thick, consistent lines that are easy for children to follow</linework>
+    <details>Minimal interior details with large, uncomplicated spaces</details>
+    <spaces>Generous coloring areas without tiny, fiddly sections</spaces>
+    <complexity>Low complexity suitable for developing motor skills</complexity>
+  </artStyle>
+  <composition>
+    <elements>Simplified, friendly dragon character with a large head and big eyes</elements>
+    <balance>Centered, upright pose with symmetrical proportions</balance>
+    <appeal>Cute, appealing form with a big smile and non-threatening features</appeal>
+  </composition>
+  <technical>
+    <accessibility>Design suitable for children's coloring abilities</accessibility>
+    <clarity>Unmistakable dragon form with very clear boundaries</clarity>
+    <robustness>Lines strong enough to remain visible even with heavy crayon application</robustness>
+  </technical>
+  <restrictions>
+    <maintain>Core dragon characteristics in a child-friendly cartoon style</maintain>
+    <avoid>Small details, complex textures, or scary expressions</avoid>
+  </restrictions>
+</prompt>`
   },
+
   "colorbook-112": {
     styleID: "colorbook-112",
     name: "Detailed Adult Coloring",
